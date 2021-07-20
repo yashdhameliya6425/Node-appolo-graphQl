@@ -1,0 +1,90 @@
+ mutation CREATE_NEW_ATTEND_STUD{
+  createNewAttendance(
+    newPost:{
+  Student:"60b5bc842f18002fd413764e"
+    }
+  ){
+    id
+    Student
+    faculty
+    status
+    createdAt
+    updatedAt
+    
+  }
+}
+
+mutation UPDATE_ATTEND_STUD{
+  updateNewAttendance(
+    updateAttendance:{
+       status:"Absent"
+       
+    }
+    id:"60b5d8fb611b9b2a88426cd4"
+  ){
+    id
+    status
+  }
+}
+
+query ALL_ATEND_STUD{
+  getAllAttendance{
+    id
+    Student{
+      id
+      Firstname
+      Lastname
+      Email
+      enrno
+    }
+    faculty{
+      Firstname
+      Lastname
+      Class{
+        Classname
+      }
+    }
+    status
+    createdAt
+    updatedAt
+  }
+}
+
+
+mutation UPDATE_ATTEND_STUD($updateAttendance:AttendanceInput!,$id:ID!){
+  updateNewAttendance(updateAttendance:$updateAttendance,id:$id){
+  id
+    Students{
+      student
+      status
+    }
+  
+  faculty
+    createdAt
+    updatedAt
+  }
+}
+
+ 
+}
+
+mutation UPDATE_ATEND_STUDENT{
+  updateNewAttendance(
+    updateAttendance:{
+      Students:{
+        student:"60b5bc842f18002fd413764e",
+        status:"absent"
+      }
+    }
+    id:"60b8753addbd7b2e1067a716"
+  ){
+    id
+    Students{
+      student
+      status
+    }
+    faculty
+    createdAt
+    updatedAt
+  }
+}

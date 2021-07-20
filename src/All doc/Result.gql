@@ -1,0 +1,77 @@
+
+
+ mutation{
+   createResult(
+     Input:{
+       student:"60b5bc842f18002fd413764e"
+    
+     }
+   ){
+     id
+     student
+     Score{
+       subject
+       marks
+       total
+     }
+      total
+      grade
+     result
+   }
+ }
+
+
+ mutation{
+   updateResult(
+     newPost:{
+       student:"60b5bc842f18002fd413764e",
+       classId:"60b489f523a1ea21186860a8"
+       Score:{
+         subject:"60b4a289a0db690dfc02ae4e",
+         marks:56,
+         total:56
+       }
+ }
+   ){
+     id
+     student
+     Score{
+       subject
+       marks
+       total
+     }
+     total
+     grade
+     result
+     percentage
+     classId
+     createdBy
+     updatedBy
+      createdAt
+     updatedAt
+   }
+ }
+
+
+ query GET_RESULT{
+ getSingleResult(
+   student:"60b4e02754f76c2a80ff5e55",
+   classId:"60b489f523a1ea21186860a8"
+ )
+ {
+   id
+   student
+   Score{
+     subject
+     marks
+     total
+   }
+   total
+   grade
+   result
+   percentage
+   createdBy
+   createdAt
+ }
+
+ }

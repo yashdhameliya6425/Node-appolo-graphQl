@@ -1,0 +1,47 @@
+mutation CREATE_BOOK($title:String!,$authorName:String!,$publisher:String!,$publishDate:Date ){
+  createBook(
+        Input:{
+          title:$title
+          authorName:$authorName
+          publisher:$publisher
+          publishDate:$publishDate
+        }
+  ){
+    id
+    title
+    authorName
+    publisher
+    publishDate
+     createdBy
+    updatedBy
+     createdAt
+    updatedAt
+    
+  }
+}
+
+
+mutation ($id:ID!){
+deleteBook(id:$id){
+  id
+  message
+  success
+}
+}
+
+
+
+query{
+  getSingleBook(id:"60c1adb25b6f412a8c969672"){
+    id
+    title
+    publisher
+    authorName
+    publishDate
+    createdBy
+    updatedBy
+    createdAt
+    updatedAt
+    
+  }
+}

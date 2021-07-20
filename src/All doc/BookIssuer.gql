@@ -1,0 +1,84 @@
+ mutation CREATE_ISSUER($bookId:ID!,$studentId:ID!,$returnDays:Int!,$isReturn:Boolean!){
+   createBookIssuer(
+     Input:{
+       bookId:$bookId,
+       studentId:$studentId,
+       returnDays:$returnDays,
+       isReturn:$isReturn
+     }
+   ){
+     id
+     bookId
+     returnDays
+     isReturn
+     createdBy
+     updatedBy
+     createdAt
+     updatedAt
+   }
+  
+  
+
+ }
+ query{
+    getAllBookIssuers{
+     id
+     bookId{
+       id
+       title 
+     }
+     studentId{
+       id
+       Firstname
+       Lastname
+     }
+     returnDays
+     isReturn
+     createdBy
+      updatedBy
+     createdAt
+     updatedAt
+   }
+ }
+ }
+
+ mutation{
+   penaltyBookIssuer(
+     Input:{
+       bookId:"60c1e50fe33dcf1bdce5c40f"
+       studentId:"60b5bc6a2f18002fd413764d"
+     }
+   ){
+     id
+     bookId
+     returnDays
+     studentId
+     isReturn
+     penalty
+     createdBy
+     updatedBy
+     createdAt
+      updatedAt
+   }
+ }
+
+
+ query{
+   getSingleBookIssuers(id:"60c301e574b8752b38c814ff"){
+     id
+     bookId{
+       id
+       title
+     }
+     studentId{
+       id
+       Firstname
+     }
+     returnDays
+     isReturn
+      createdBy
+     updatedBy
+     createdAt
+   
+   }
+ }

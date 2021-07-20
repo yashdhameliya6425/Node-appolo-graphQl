@@ -1,0 +1,74 @@
+mutation CREATE_SUBJECT{
+  createNewSubject(
+    newPost:{
+      Subjectname:"English"
+      SubjectCode:"301"
+    }
+  ){
+    id
+    Subjectname
+    SubjectCode
+    createdBy
+    updatedBy
+    createdAt
+     updatedAt
+    isActive
+  }
+}
+
+
+ mutation DELETE_SUBJECT{
+  deleteSubject(id:"60b4a2b8a0db690dfc02ae50"){
+    id
+    message
+    success
+  }
+}
+
+
+mutation UPDATE_SUBJECT{
+  updateSubject(
+    updatedSubject:{
+      Subjectname:"database",
+     SubjectCode :"213"
+    }
+    id:"60b4a289a0db690dfc02ae4e"
+  ){
+     id
+    Subjectname
+    SubjectCode
+    createdBy
+    updatedBy
+    createdAt
+    updatedAt
+    isActive
+  }
+}
+
+query ALL_SUBJECT{
+  getAllSubject{
+     id
+    Subjectname
+    SubjectCode
+    createdBy
+    updatedBy
+    createdAt
+     updatedAt
+    isActive
+  }
+}
+
+query getSingleSubject($id:ID!){
+  getSingleSubject(id:$id){
+    id
+   Subjectname
+  SubjectCode
+    createdBy
+    updatedBy
+    createdAt
+    updatedAt
+    isActive
+  }
+}
+
+  

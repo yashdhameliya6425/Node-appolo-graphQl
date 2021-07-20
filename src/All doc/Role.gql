@@ -1,0 +1,66 @@
+mutation CREATE_NEW_ROLE{
+  createNewRole(
+    newPost:{
+      Rolename:"subject",
+
+    }
+  ){
+    id
+    Rolename
+    createdBy
+    updatedBy
+  }
+}
+
+
+mutation DELETE_ROLE{
+  deleteRole(id:"60b46be9478c27035058fae2"){
+    id
+    message
+    success
+  }
+}
+
+
+
+mutation UPDATE_ROLE{
+updateRole(
+  updatedPost:{
+    Rolename:"admin"
+    
+  }
+  id:"60b46bd5478c27035058fae1"
+){
+  id
+  Rolename
+  createdBy
+  updatedBy
+  
+}
+}
+
+
+query GET_ALL_ROLE{
+  getAll{
+     id
+    Rolename
+    createdAt
+    updatedAt
+    isActive
+   createdBy
+    updatedBy
+  }
+}
+
+
+query getSingle($id:ID!){
+  getSingle(id:$id){
+    id
+    Rolename
+    createdBy
+    updatedBy
+    createdAt
+    updatedAt
+    isActive
+  }
+}

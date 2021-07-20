@@ -1,0 +1,36 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon --exec babel-node --inspect src/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@babel/core": "^7.14.0",
+    "@babel/node": "^7.13.13",
+    "@babel/preset-env": "^7.14.1",
+    "apollo-server": "^2.25.0",
+    "apollo-server-errors": "^2.5.0",
+    "apollo-server-express": "^2.24.0",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "consola": "^2.15.3",
+    "cors": "^2.8.5",
+    "dotenv": "^9.0.2",
+    "express": "^4.17.1",
+    "graphql": "^15.5.0",
+    "graphql-resolvers": "^0.4.2",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.21",
+    "module": "^1.2.5",
+    "moment": "^2.29.1",
+    "mongoose": "^5.12.8",
+    "nodemon": "^2.0.7",
+    "uuid": "^8.3.2"
+  }
+}

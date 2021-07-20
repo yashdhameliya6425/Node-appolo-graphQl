@@ -1,0 +1,106 @@
+mutation{
+  createNewfaculty(
+    newfaculty:{
+        Firstname:"raju",
+       Lastname:"domadiya",
+       Email:"raju@gmail.com",
+       Password:"123",
+       Class:"60b48a0323a1ea21186860aa"
+      Subject:"60b4a282a0db690dfc02ae4d"
+    
+    }
+    
+  )
+  
+  {
+   
+    Firstname
+    Lastname
+    Email
+    Password
+    Subject
+    Class
+    role
+    createdAt
+    updatedAt
+   
+    
+  }
+}
+
+mutation{
+  deletefaculty(id:"60b4bbf555b43d11f4694afe"){
+    id
+    message
+    success
+  }
+}
+
+
+mutation UPDATE_FACULTY {
+  updatefaculty(
+    updatedPost:{
+      Firstname:"Raj",
+      Lastname:"Sojitra",
+      Email:"Raj@gmail.com",
+      Password:"111",
+      
+    }
+    id:"60b4b45dbc65ad28ec51690b"
+  ){
+    id
+    Firstname
+    Lastname
+    Email
+    Password
+  }
+}
+
+query GET_SINGLE_FACULTY($id:ID!){
+  getSinglefaculty(id:$id){
+id
+    Firstname
+    Lastname
+    Email
+    Password
+    Class{
+      id 
+      Classname
+    }
+    Subject{
+      id
+      Subjectname
+      SubjectCode
+    }
+     role{
+      id
+      Rolename
+    }
+    createdAt
+    updatedAt
+    isActive
+  
+  }
+}
+
+query GET_ALL_FACULTY{
+  getAllfaculty{
+    id
+    Firstname
+    Lastname
+    Email
+    Password
+   Class
+    Subject{
+      id
+      Subjectname
+      SubjectCode
+    }
+    role{
+      id
+      Rolename
+    }
+  }
+}
+
+

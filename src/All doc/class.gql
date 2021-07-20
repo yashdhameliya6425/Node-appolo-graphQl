@@ -1,0 +1,64 @@
+mutation CREATE_CLASS{
+  createNewClass(
+    newPost:{
+   Classname:"E"
+    }
+  ){
+    id
+    Classname
+    createdBy
+    updatedBy
+    createdAt
+    updatedAt
+    isActive
+  }
+}
+
+mutation DELETE_CLASS{
+  deleteClass(id:"60b48a0923a1ea21186860ab"){
+    id
+    message
+    success
+  }
+}
+
+mutation UPDATE_CLASS{
+  updateClass(
+    updatedPost:{
+      Classname:"F"
+    }
+    id:"60b0b93572dd841d949b1ee5"
+  ){
+    id
+    Classname
+    updatedBy
+    createdAt
+    updatedAt
+    isActive
+  }
+}
+
+
+query ALL_CLASS{
+  getAllClass{
+    id
+    Classname
+    createdBy
+    updatedBy
+    createdAt
+    updatedAt
+    isActive
+  }
+}
+
+query  getSingleClass($id:ID!){
+  getSingleClass(id:$id){
+    id
+    Classname
+    createdBy
+    updatedBy
+    createdAt
+    updatedAt
+    isActive
+  }
+}
